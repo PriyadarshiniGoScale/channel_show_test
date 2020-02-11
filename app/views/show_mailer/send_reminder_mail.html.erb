@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>30 minutes left for show <%= @show.name%></h1>
+    <p>
+      show start time:
+      <%= @show.start_time.strftime('%d/%m/%Y %R') %>
+    </p>
+    <p>
+    	show end time:
+      <%= @show.end_time.strftime('%d/%m/%Y %R') %>
+    </p>
+    <p>Thanks for using this feature.</p>
+  </body>
+</html>

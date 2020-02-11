@@ -1,0 +1,23 @@
+#searchBtn{
+	margin-top: 37%;
+}
+.pull-right{
+	text-align: right !important;
+	margin-right: 2%;
+}
+.container{
+	margin-top: 2% !important;
+}
+.header{
+	display: grid;
+    background-color: #323340b8;
+}
+.userName{
+	color: white;
+}
+.search{
+	margin-top: 3%;
+}
+.red{
+	color: red !important;
+}

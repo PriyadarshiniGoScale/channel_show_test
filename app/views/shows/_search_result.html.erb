@@ -1,0 +1,30 @@
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Channel Name</th>
+      <th>Show Name</th>
+      <th>Show Start Time</th>
+      <th>Show End Time</th>
+      <th>Favorites</th>
+    </tr>
+  </thead>
+  <tbody>
+  	<% if shows.present? %>
+	  	<% shows.each do |show| %>
+	      <tr>
+	        <td><%= show.channel.name%></td>
+	        <td><%= show.name%></td>
+	        <td><%= show.start_time.strftime('%d/%m/%Y %R')%></td>
+		      <td><%= show.end_time.strftime('%d/%m/%Y %R')%></td>
+		      <td id=<%='show_'+show.id.to_s%>>
+		      	<%= render 'favorites', show: show %>
+		      </td>
+	      </tr>
+	    <% end %>
+    <% else %>
+    	<tr col_span=4>
+	      <td>No result found. Please try with other search.</td>
+	    </tr>
+    <% end %>
+  </tbody>
+</table>

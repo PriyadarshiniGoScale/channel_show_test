@@ -1,0 +1,6 @@
+<% if @alert.present? %>
+	toastr.error('<%= @alert %>');
+<% else %>
+	toastr.success('<%= @show.name %> added in your favorites.');
+<% end %>
+$('#show_<%= @show.id%>').empty().append('<%= j render "/shows/favorites", show: @show %>');

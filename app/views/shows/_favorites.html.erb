@@ -1,0 +1,9 @@
+<%if current_user&.added_in_favorites(show.id) %>
+	<%= link_to favorite_path(show.id), method: :delete, remote: true, class: 'red' do %>
+		<i class="fa fa-heart"></i>
+	<% end %>
+<% else %>
+	<%= link_to favorites_path(show_id: show.id), method: :post, remote: true do %>
+		<i class="fa fa-heart"></i>
+	<% end %>
+<% end %>

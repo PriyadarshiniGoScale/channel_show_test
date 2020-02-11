@@ -1,0 +1,23 @@
+<div class='row'>
+	<%= search_form_for @q, remote: true do |f| %>
+		<div class='row'>
+		  <div class='col-sm-5'>
+		  	<%= f.label 'Channel name or Show Name' %>
+		  	<%= f.search_field :name_or_channel_name_cont, class: 'form-control' %>
+			</div>
+		  <div class='col-sm-5'>
+		  	<%= f.label 'Search with show start time' %>
+		  	<%= f.search_field :start_time_eq, class: 'form-control', id: 'datetimepicker' %>
+		  </div>
+		  <div class='col-sm-2'>
+		  	<%= f.submit 'SEARCH', class: 'btn btn-primary', id: 'searchBtn' %>
+		  </div>
+		</div>
+	<% end %>
+</div>
+<div class='search'>
+	<h4><strong>Search Result</strong></h4>
+	<div class='row' id='searchResult'>
+		<%= render 'search_result', shows: @shows%>
+	<div>
+</div>
